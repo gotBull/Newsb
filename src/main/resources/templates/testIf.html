@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:if="${3<5}"style="width: 30%; background-color: #53f0ff;padding: 3rem;">3小於5</div>
+    <div th:if="${session.isAdmin}"style="width: 30%; background-color: #cccb85;padding: 3rem;">sessionAdmin</div>
+    <div th:if="${isAdmin}"style="width: 30%; background-color: #ff8d3c;padding: 3rem;">modelAdmin</div>
+<hr>
+    <div th:if="${isAdmin}"style="width: 30%; background-color: antiquewhite;padding: 3rem;">是管理者</div>
+    <div th:unless="${isAdmin}"style="width: 30%; background-color: #8b33bf;padding: 3rem;">不是管理者</div>
+<hr>
+    <h2>要在網址加上 ?msg=Admin</h2>
+    <div th:if="${#strings.equals(param.msg,'Admin')}"style="width: 30%; background-color: #3efc8f;padding: 3rem;">如果都打對才會看到</div>
+    <div th:if="${#strings.equalsIgnoreCase(param.msg,'Admin')}" style="width: 30%; background-color:#e74f4f ;padding: 3rem;">大小寫都可以</div>
+</body>
+</html>

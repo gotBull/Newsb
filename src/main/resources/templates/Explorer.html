@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="${session.msg}"> a news is beging</p>
+    <p th:text="${msg2}">a new message</p>
+    <p th:text="${msg2}">Thrid message is comming</p>
+    <p th:text="${#vars.msg2}">Vars</p>
+    <p th:text="${param.msg2}">param</p>
+    <hr>
+    3 &gt 5 : <span th:text=" 3>5 ">0</span><br>
+    3 &le; 5 : <span th:text=" 3<=5 ">0</span><br>
+    3 &equals; 5 : <span th:text=" 3==5 ">0</span><br>
+
+</body>
+</html>
